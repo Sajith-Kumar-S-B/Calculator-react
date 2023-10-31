@@ -27,7 +27,7 @@ function Button({displayContent,handleDecimalPoint,handleOperator,handleEqual,ha
         
           <button onClick={() => handlePercentage()}   data-type="number" 
           >%</button>
-          <button onClick={() => handlePercentage()} className="zero" data-type="number" 
+          <button onClick={()=>displayContent('0')} className="zero" data-type="number" 
           >0</button>
           <button  onClick={handleEqual} className="equal" value="=" data-type="operation" >=</button>
         </div>
