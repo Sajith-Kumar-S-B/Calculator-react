@@ -1,11 +1,24 @@
 import React from 'react'
 import Calculator from './CalculatorDiv/Calculator'
+import { ToastContainer, toast } from "react-toastify";
 
 function Home() {
   return (
-    <div className='home' style={{paddingTop:'60px',height:'100vh',width:'100%'}}>
+    <div className='home' >
 
     <Calculator/>
+    <ToastContainer
+            position="top-center"
+            autoClose={1000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+           
+          />
 
     </div>
   )

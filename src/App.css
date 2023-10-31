@@ -1,0 +1,25 @@
+
+
+
+.light-mode {
+    --clr-bg: #ffffff;
+    --clr-bg-alt:#f5f5f5;
+    --clr-fg: #000000;
+    --clr-fg-alt: #444;
+    --clr-primary: #105081;
+    --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --clr-lg:#eae7e7;
+    --clr-div:#fcfcfc;
+  }
+  
+  .dark-mode {
+    --clr-bg: #36474f;
+    --clr-bg-alt: #18212a;
+    --clr-fg: #ffffff;
+    --clr-fg-alt: #cdcdff;
+    --clr-primary: #a7baff;
+    --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      --clr-lg:#a7baff;
+      --clr-div:#424242;
+  }

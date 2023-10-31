@@ -5,13 +5,17 @@
 }
 
 
+body{
+  background-color: #eeeeee;
+
+}
+
+.home{
+  padding: 60px 0 ;
+}
 
 
 
 
-/* @media (max-width:450px){
-  .home{
-     padding: 60px 20px;
-  }   
- }
-  */
+
+
