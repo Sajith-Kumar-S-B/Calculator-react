@@ -1,6 +1,6 @@
 import React from 'react'
 import './Button.css'
-function Button({displayContent,handleDecimalPoint,handleOperator,handleEqual,handleClear,removeLast}) {
+function Button({displayContent,handleDecimalPoint,handleOperator,handleEqual,handleClear,removeLast,handlePercentage}) {
 
  
   return (
@@ -25,11 +25,10 @@ function Button({displayContent,handleDecimalPoint,handleOperator,handleEqual,ha
           <button  onClick={()=>displayContent('3')} value="3" data-type="number" >3</button>
           <button className='operator'  onClick={() => handleOperator('/')}  data-type="operation" >÷</button>
         
-          <button  onClick={()=>displayContent('0')} className="zero" value="0" data-type="number" 
+          <button onClick={() => handlePercentage()}   data-type="number" 
+          >%</button>
+          <button onClick={() => handlePercentage()} className="zero" data-type="number" 
           >0</button>
-          <button onClick={()=>displayContent('(')} data-type="number" 
-          >(</button>
-          <button onClick={()=>displayContent(')')}  data-type="number" >)</button>
           <button  onClick={handleEqual} className="equal" value="=" data-type="operation" >=</button>
         </div>
    </div>

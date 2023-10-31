@@ -90,7 +90,20 @@ function Calculator() {
   };
 
   const removeLast = ()=>{
-    setDisplay(display.slice(0,-1))
+    if (display === '0') return; 
+    let newDisplayValue = '';
+    
+    if (display === String(performCalculation())) {
+      newDisplayValue = String(display).slice(0, -1);
+  
+      if (newDisplayValue === '') {
+        newDisplayValue = '0';
+      }
+    } else {
+      newDisplayValue = String(display).slice(0, -1);
+    }
+  
+    setDisplay(newDisplayValue);
   }
 
 
@@ -99,11 +112,17 @@ function Calculator() {
   };
 
 
+  const handlePercentage = () => {
+    const percentageValue = parseFloat(display) / 100;
+    setDisplay(percentageValue.toString());
+  };
+
+
   return (
     <div className={`calculateWrap ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
        
         <Screen display={display} operator={operator} secondOperand={secondOperand} toggleMode={toggleMode} isDarkMode={isDarkMode} />
-        <Button displayContent={displayContent} handleOperator={handleOperator} handleDecimalPoint={handleDecimalPoint} handleEqual={handleEqual} handleClear={handleClear} removeLast={removeLast}  />
+        <Button displayContent={displayContent} handleOperator={handleOperator} handleDecimalPoint={handleDecimalPoint} handleEqual={handleEqual} handleClear={handleClear} removeLast={removeLast} handlePercentage={handlePercentage}  />
         </div>
   )
 }
